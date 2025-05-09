@@ -1,37 +1,28 @@
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
-
-
 int main() {
-    int n;
-    cin>>n;
-    
-    
-    int x = 1;
-    cout << x <<endl;
-    int curr =0;
-    int y;
-    if(n>1){
-     y = 2;
-     curr = 3;
-    cout << y << " " << curr << endl;
-    }
-     x= y;
-     y = curr;
-
-    
-    for( int row =3; row<=n; row++){
-        for(int j = 0; j<row; j++){
-            curr =  x+y;
-            cout << curr << " ";
-            x = y;
-            y = curr;
-        }
-        cout << endl;
-    }
-    
+   int n ;
+   cin>>n;
    
-    
-
+   for(int row = 1; row<=n; row++){
+       // 1st part 
+       int x = 1;
+       for(int i =1; i<=row; i++){
+           cout << x<< " ";
+           x++;
+       }
+       // 2nd space 
+       for(int i =0; i< (2*n)-2*row; i++){
+           cout <<  "  ";
+       }
+  
+           int y =row;
+       for(int i =1; i<=row; i++){
+           cout << y<< " ";
+           y--;
+       }
+       cout << endl;
+   }
     return 0;
 }
